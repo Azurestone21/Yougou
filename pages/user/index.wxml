@@ -1,0 +1,92 @@
+<!-- <navigator url="/pages/login/index">你还没有登录，请先登录</navigator> -->
+
+<view class="">
+
+  <!-- 用户 -->
+  <view class="user_info_wrap">
+    <view wx:if="{{userInfo.nickName}}" class="user_bg">
+      <!-- 背景 -->
+      <image class="user_bg_image" src="{{userInfo.avatarUrl}}" />
+      <view class="user_info">
+        <!-- 用户头像 -->
+        <image class="user_avatar" src="{{userInfo.avatarUrl}}"/>
+        <!-- 用户昵称 -->
+        <view class="user_nickname">{{userInfo.nickName}}</view>
+      </view>
+    </view>
+    <view wx:else class="user_login">
+      <navigator url="/pages/login/index">登录</navigator>
+    </view>
+  </view>
+
+  <view class="user_content">
+    <view class="user_main">
+
+      <!-- 历史 -->
+      <view class="user_history_wrap">
+        <navigator class="user_history_item" url="/pages/collect/index">
+          <view class="num">{{collectNum}}</view>
+          <view class="item_sort">收藏的商品</view>
+        </navigator>
+        <navigator class="user_history_item">
+          <view class="num">0</view>
+          <view class="item_sort">收藏的店铺</view>
+        </navigator>
+        <navigator class="user_history_item">
+          <view class="num">0</view>
+          <view class="item_sort">关注的商品</view>
+        </navigator>
+        <navigator class="user_history_item">
+          <view class="num">0</view>
+          <view class="item_sort">我的足迹</view>
+        </navigator>
+      </view>
+
+      <!-- 我的订单 -->
+      <view class="user_order_wrap">
+        <view class="user_order_title">我的订单</view>
+        <view class="user_order">
+          <navigator url="/pages/order/index?type=1" class="user_order_item">
+            <view class="iconfont icon-ding_dan"></view>
+            <view class="item_sort">全部订单</view>
+          </navigator>
+          <navigator url="/pages/order/index?type=2" class="user_order_item">
+            <view class="iconfont icon-fukuantongzhi"></view>
+            <view class="item_sort">待付款</view>
+          </navigator>
+          <navigator url="/pages/order/index?type=3" class="user_order_item">
+            <view class="iconfont icon-receipt-address"></view>
+            <view class="item_sort">待收货</view>
+          </navigator>
+          <navigator class="user_order_item">
+            <view class="iconfont icon-tuihuotuikuan_dianpu"></view>
+            <view class="item_sort">退款/退货</view>
+          </navigator>
+        </view>
+      </view>
+
+      <!-- 收获地址管理 -->
+      <view class="receive_address">
+        <navigator>收获地址管理</navigator>
+      </view>
+
+      <!-- 小程序 相关 -->
+      <view class="app_about">
+        <view class="contact">
+          <text >联系客服</text>
+          <text >400-618-4000</text>  
+        </view>
+        <navigator url="/pages/feedback/index">意见反馈</navigator>
+        <navigator>关于我们</navigator>
+      </view>
+
+      <!-- 推荐 -->
+      <view class="recommend">
+        <navigator>收获地址管理</navigator>
+      </view>
+
+    </view>
+  </view>
+</view>
+
+

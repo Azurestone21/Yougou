@@ -1,0 +1,36 @@
+<view>
+  <tabs tabsItem="{{tabs}}" bindtabItemChange="handleTabItemChange">
+    <view class="feedback_wrap">
+      <!-- 标题 -->
+      <view class="feedback_title">反馈问题：</view>
+      <!-- 问题类型 -->
+      <view class="feedback_sort">
+        <text>功能问题</text>
+        <text>购买遇到的问题</text>
+        <text>性能问题</text>
+        <text>其他</text>
+      </view>
+      <!-- 内容 -->
+      <view class="feedback_text">
+        <textarea value="{{textValue}}" placeholder="请描述一下您的问题" bindinput="handleInputText"></textarea>
+        <view class="feedback_img_up">
+          <button bindtap="handleChooseImg">+</button>
+          <view class="feedback_upImg"
+          wx:for="{{chooseImgs}}"
+          wx:key="*this"
+          bindtap="handleRemoveImg"
+          data-index="{{index}}">
+            <upImg src="{{item}}"></upImg>
+          </view>
+        </view>
+      </view>
+      <!-- 提交 -->
+      <view class="feedback_submit_wrap">
+        <button bindtap="handleSubmit">
+          <icon class="" type="success_no_circle" size="23" color="#fff"></icon>
+          提交
+        </button>
+      </view>
+    </view>
+  </tabs>
+</view>

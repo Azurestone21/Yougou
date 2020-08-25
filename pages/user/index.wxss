@@ -1,0 +1,134 @@
+page {
+  background-color: #edece8;
+}
+.user_info_wrap {
+  height: 45vh;
+  background-color: #f8dbda;
+  overflow: hidden;
+}
+.user_info_wrap .user_bg {
+  position: relative;
+}
+.user_info_wrap .user_bg .user_bg_image {
+  width: 110vw;
+  height: 50vh;
+  position: absolute;
+  top: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(10rpx);
+}
+.user_info_wrap .user_bg .user_info {
+  position: absolute;
+  top: 120rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.user_info_wrap .user_bg .user_info .user_avatar {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.user_info_wrap .user_bg .user_info .user_nickname {
+  margin-top: 50rpx;
+  color: #fff;
+}
+.user_info_wrap .user_login {
+  position: absolute;
+  top: 100rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  border: 5rpx solid #fff;
+  color: #fff;
+  font-size: 36rpx;
+  font-weight: bolder;
+}
+.user_content {
+  position: relative;
+}
+.user_content .user_main {
+  color: #666;
+  width: 90%;
+  position: absolute;
+  top: -40rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.user_content .user_main .user_history_wrap {
+  background-color: #fff;
+  display: flex;
+}
+.user_content .user_main .user_history_wrap .user_history_item {
+  text-align: center;
+  height: 90rpx;
+  flex: 1;
+  padding: 10rpx 0;
+}
+.user_content .user_main .user_history_wrap .user_history_item .num {
+  color: var(--themeColor);
+}
+.user_content .user_main .user_order_wrap {
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+.user_content .user_main .user_order_wrap .user_order_title {
+  padding: 20rpx;
+  font-weight: bolder;
+  border-bottom: 1rpx solid #ccc;
+}
+.user_content .user_main .user_order_wrap .user_order {
+  display: flex;
+}
+.user_content .user_main .user_order_wrap .user_order .user_order_item {
+  padding: 20rpx 0;
+  text-align: center;
+  height: 110rpx;
+  flex: 1;
+}
+.user_content .user_main .user_order_wrap .user_order .user_order_item .iconfont {
+  color: var(--themeColor);
+  font-size: 40rpx;
+}
+.user_content .user_main .receive_address {
+  margin-top: 20rpx;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+}
+.user_content .user_main .receive_address navigator {
+  padding: 20rpx;
+}
+.user_content .user_main .app_about {
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+.user_content .user_main .app_about .contact {
+  display: flex;
+  justify-content: space-between;
+}
+.user_content .user_main .app_about .contact text {
+  flex: 1;
+  padding: 20rpx;
+}
+.user_content .user_main .app_about .contact text:nth-child(2) {
+  text-align: right;
+}
+.user_content .user_main .app_about navigator {
+  padding: 20rpx;
+  border-top: 1rpx solid #ccc;
+}
+.user_content .user_main .recommend {
+  margin-top: 20rpx;
+  margin-bottom: 40rpx;
+  background-color: #fff;
+}
+.user_content .user_main .recommend navigator {
+  padding: 20rpx;
+}

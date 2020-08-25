@@ -1,0 +1,52 @@
+<view class="">
+  <!-- 收货地址 -->
+  <view class="receive_address_wrap">
+    <!-- 显示地址信息 -->
+    <view class="address_info">
+      <view class="user_info">
+        <view class="user_name">收货人：{{address.userName}}</view>
+        <view class="user_tel">{{address.telNumber}}</view>
+      </view>
+      <view class="user_address">{{address.all}}</view>
+    </view>
+  </view>
+
+  <!-- 购物车 -->
+  <view class="cart_content">
+    <view class="cart_title">确认信息</view>
+    <view class="cart_main">
+      <view class="cart_item"
+      wx:for="{{cart}}"
+      wx:key="goods_id"
+      >
+        <!-- 商品图片 -->
+        <navigator class="item_img">
+          <image src="{{item.goods_small_logo}}" mode="widthFix"></image>
+        </navigator>
+        <!-- 商品信息 -->
+        <view class="item_info">
+          <view class="item_name">{{item.goods_name}}</view>
+          <view class="item_price_num">
+            <view class="item_price">￥{{item.goods_price}}</view>
+            <view class="item_num">
+              <view class="num">X {{item.num}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部工具栏 -->
+  <view class="footer_tool">
+    <!-- 合计 -->
+    <view class="total_price_wrap">
+      <view class="total_price">
+        <text>合计:</text>
+        ￥{{totalPrice}}</view>
+      <view class="freight">包含运费</view>
+    </view>
+    <!-- 结算 -->
+    <view class="settlement" bindtap="handleOrderPay">确认付款({{totalNum}})</view>
+  </view>
+</view>

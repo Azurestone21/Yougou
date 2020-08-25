@@ -1,0 +1,52 @@
+<view>
+  <!-- 搜索框 -->
+  <searchInput></searchInput>
+
+  <!-- 轮播图 -->
+  <view class="index_swiper">
+    <swiper autoplay indicator-dots circular>
+      <swiper-item 
+        wx:for="{{swiperList}}" 
+        wx:key="goods_id"
+      >
+        <navigator>
+          <image src="{{item.image_src}}" mode="widthFix" />
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <!-- 导航 -->
+  <view class="index_nav">
+    <navigator
+    wx:for="{{navList}}"
+    wx:key="name">
+      <image src="{{item.image_src}}" mode="widthFix"></image>
+    </navigator>
+  </view>
+
+  <!-- 分类 -->
+  <view class="index_sort">
+    <view class="index_group"
+    wx:for="{{sortList}}"
+    wx:for-index="index1"
+    wx:for-item="item1"
+    wx:key="name">
+      <!-- 分类标题 -->
+      <view class="sort_title">
+        <image src="{{item1.floor_title.image_src}}" mode="widthFix"></image>
+      </view>
+      <!-- 列表图片 -->
+      <view class="sort_list">
+        <navigator url="" open-type="navigate"
+        wx:for="{{item1.product_list}}"
+        wx:for-index="index2"
+        wx:for-item="item2"
+        wx:key="name">
+          <image src="{{item2.image_src}}" mode="{{index2===0?'widthFix':'scaleToFill'}}"></image>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>
+  

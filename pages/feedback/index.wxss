@@ -1,0 +1,70 @@
+/* pages/feedback/index.wxss */
+page {
+  background-color: #eeeeee;
+}
+.feedback_wrap {
+  padding: 20rpx;
+}
+.feedback_wrap .feedback_title {
+  height: 60rpx;
+  font-size: 32rpx;
+  align-items: center;
+}
+.feedback_wrap .feedback_sort {
+  display: flex;
+  flex-wrap: wrap;
+}
+.feedback_wrap .feedback_sort text {
+  padding: 20rpx;
+  margin: 10rpx;
+  background-color: #fff;
+}
+.feedback_wrap .feedback_text {
+  margin-top: 10rpx;
+  background-color: #fff;
+}
+.feedback_wrap .feedback_text textarea {
+  padding: 20rpx;
+}
+.feedback_wrap .feedback_text .feedback_img_up {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 20rpx;
+}
+.feedback_wrap .feedback_text .feedback_img_up button {
+  background-color: #eee;
+  border: 1rpx solid #ccc;
+  font-size: 60rpx;
+  font-weight: normal;
+  color: #666;
+  width: 90rpx;
+  height: 90rpx;
+  padding: 0;
+  margin: 0;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.feedback_wrap .feedback_text .feedback_upImg {
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.feedback_wrap .feedback_submit_wrap {
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.feedback_wrap .feedback_submit_wrap button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: normal;
+  color: #fff;
+  background-color: #e64340;
+  padding: 20rpx;
+  margin: 0;
+  width: 30%;
+}
